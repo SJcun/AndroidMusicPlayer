@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="musicplayer:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc946df9-67ce-4b32-ae42-61494fed4c49" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="musicplayer" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/APP/maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\APP\maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iuxoaQjldtJCYhcRmy3LA5T64E" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/music" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code\musicplayer\src\main\webapp\music" />
+      <recent name="E:\code\musicplayer\src\main\webapp\image" />
+      <recent name="E:\code\musicplayer\src\main\java" />
+      <recent name="E:\code\musicplayer\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.35">
+    <configuration name="GetMusicListServlet.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicplayer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="servlet.music.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="servlet.music" />
+      <option name="MAIN_CLASS_NAME" value="servlet.music.GetMusicListServlet" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginServlet.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicplayer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="servlet.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="servlet.user" />
+      <option name="MAIN_CLASS_NAME" value="servlet.user.LoginServlet" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MusicServiceImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicplayer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.music.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.music" />
+      <option name="MAIN_CLASS_NAME" value="service.music.MusicServiceImpl" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicplayer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao.user" />
+      <option name="MAIN_CLASS_NAME" value="dao.user.UserDaoImpl" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test2.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicplayer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test2" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.35" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="musicplayer:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/musicplayer" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_musicplayer_4" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54081" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="musicplayer:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.LoginServlet.Test" />
+      <item itemvalue="JUnit.UserDaoImpl.test" />
+      <item itemvalue="JUnit.test2.test" />
+      <item itemvalue="JUnit.MusicServiceImpl.test" />
+      <item itemvalue="JUnit.GetMusicListServlet.test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.35" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GetMusicListServlet.test" />
+        <item itemvalue="JUnit.MusicServiceImpl.test" />
+        <item itemvalue="JUnit.test2.test" />
+        <item itemvalue="JUnit.UserDaoImpl.test" />
+        <item itemvalue="JUnit.LoginServlet.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1f13e946" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc946df9-67ce-4b32-ae42-61494fed4c49" name="Default Changelist" comment="" />
+      <created>1602771453699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602771453699</updated>
+      <workItem from="1602771456711" duration="3337000" />
+      <workItem from="1602852185068" duration="8494000" />
+      <workItem from="1602863520177" duration="635000" />
+      <workItem from="1602907035670" duration="6503000" />
+      <workItem from="1603009692592" duration="3199000" />
+      <workItem from="1603110360867" duration="617000" />
+      <workItem from="1603379995338" duration="1720000" />
+      <workItem from="1603513779685" duration="1858000" />
+      <workItem from="1603591672927" duration="6212000" />
+      <workItem from="1603714575540" duration="4078000" />
+      <workItem from="1603799716591" duration="2864000" />
+      <workItem from="1604156980543" duration="1864000" />
+      <workItem from="1604586265109" duration="574000" />
+      <workItem from="1604588439823" duration="96000" />
+      <workItem from="1604745913780" duration="12510000" />
+      <workItem from="1604804496195" duration="623000" />
+      <workItem from="1604826105274" duration="2230000" />
+      <workItem from="1605186061567" duration="3084000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604749315615">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604749315615" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1602857001537">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602857001537" />
+    <state x="275" y="21" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1603011564052">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="21" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728@0.0.1366.728" timestamp="1603011564052" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604586829471">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604586829471" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1602771569048">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602771569048" />
+    <state width="905" height="362" key="GridCell.Tab.0.bottom" timestamp="1605195011246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605195011246" />
+    <state width="905" height="362" key="GridCell.Tab.0.center" timestamp="1605195011246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605195011246" />
+    <state width="905" height="362" key="GridCell.Tab.0.left" timestamp="1605195011246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605195011246" />
+    <state width="905" height="362" key="GridCell.Tab.0.right" timestamp="1605195011246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605195011246" />
+    <state width="905" height="362" key="GridCell.Tab.1.bottom" timestamp="1605195011247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605195011247" />
+    <state width="905" height="362" key="GridCell.Tab.1.center" timestamp="1605195011247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605195011247" />
+    <state width="905" height="362" key="GridCell.Tab.1.left" timestamp="1605195011247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605195011247" />
+    <state width="905" height="362" key="GridCell.Tab.1.right" timestamp="1605195011247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605195011247" />
+    <state width="905" height="362" key="GridCell.Tab.2.bottom" timestamp="1605195011248">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605195011248" />
+    <state width="905" height="362" key="GridCell.Tab.2.center" timestamp="1605195011247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1605195011247" />
+    <state width="905" height="362" key="GridCell.Tab.2.left" timestamp="1605195011247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1605195011247" />
+    <state width="905" height="362" key="GridCell.Tab.2.right" timestamp="1605195011248">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="362" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1605195011248" />
+    <state x="363" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1605186060175">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1605186060175" />
+    <state x="57" y="58" key="new project wizard" timestamp="1602925135763">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="57" y="58" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1602925135763" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1602856922023">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1602856922023" />
+  </component>
+</project>
