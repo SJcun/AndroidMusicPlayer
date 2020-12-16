@@ -10,6 +10,10 @@ Android音乐播放器开发
 
 算是全部完成了，后续只会改进了。
 
+## 如何使用
+
+&emsp;&emsp;按这篇[博客](https://blog.csdn.net/a34927341/article/details/52949842)修改一下gradle相关文件，匹配自己的开发环境
+
 #### 日志
 
 2020.12.15 把电脑借给别人了，导致好久没写了。完成音乐播放列表，同步了记录。（[博客地址](https://blog.csdn.net/cun_king/article/details/111243881)）
