@@ -29,17 +29,5 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:layout_centerInParent="true"/>
-    <!--到main_title_bar.xml中tv_main_title按钮的下方，加个“保存”-->
-    <TextView
-        android:id="@+id/tv_save"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentRight="true"
-        android:visibility="gone"
-        android:text="保存"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"/>
+
 </RelativeLayout>

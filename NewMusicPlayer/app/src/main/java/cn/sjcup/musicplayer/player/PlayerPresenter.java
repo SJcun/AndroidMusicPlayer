@@ -7,6 +7,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import cn.sjcup.musicplayer.activity.MainActivity;
+import cn.sjcup.musicplayer.util.MusicPlayUtil;
 
 public class PlayerPresenter implements PlayerControl {
 
@@ -15,6 +16,7 @@ public class PlayerPresenter implements PlayerControl {
     private static final String ADDRESS = "http://192.168.43.230:8080/musicplayer/music/";
     private PlayerViewControl mViewController = null;
     private MainActivity mMainActivity = null;
+    private MusicPlayUtil musicPlayUtil = MusicPlayUtil.getInstance();   //获取工具类实体类对象
 
     //播放状态
     public final int PLAY_STATE_PLAY=1;   //在播
@@ -27,13 +29,15 @@ public class PlayerPresenter implements PlayerControl {
     private SeekTimeTask mTimeTask;
 
     public PlayerPresenter(MainActivity activity){
-        mMainActivity = activity;
+        this.mMainActivity = activity;
     }
 
     @Override
     public void playOrPause(MainActivity.IsPlay playState) {
         if(mViewController == null){
             this.mViewController = mMainActivity.mPlayerViewControl;
+
+
         }
 
         if (mCurrentState == PLAY_STATE_STOP || playState == MainActivity.IsPlay.play) {
@@ -80,21 +84,21 @@ public class PlayerPresenter implements PlayerControl {
         if (mMainActivity.playPattern == mMainActivity.PLAY_IN_ORDER) {
             if (mMainActivity.musicId == 0) {
                 mMainActivity.musicId = mMainActivity.songNum-1;
-                mMainActivity.setMusicView(MainActivity.IsPlay.play);
+                musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
             } else {
                 mMainActivity.musicId = mMainActivity.musicId - 1;
-                mMainActivity.setMusicView(MainActivity.IsPlay.play);
+                musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
             }
         }
 
         //随机播放
         else if (mMainActivity.playPattern == mMainActivity.PLAY_RANDOM) {
             mMainActivity.musicId = ( mMainActivity.musicId+(int)(1+Math.random()*(20-1))) % mMainActivity.songNum ;
-            mMainActivity.setMusicView(MainActivity.IsPlay.play);
+            musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
         }
         //单曲循环
         else if(mMainActivity.musicId==mMainActivity.PLAY_SINGLE){
-            mMainActivity.setMusicView(MainActivity.IsPlay.play);
+            musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
         }
     }
 
@@ -104,17 +108,17 @@ public class PlayerPresenter implements PlayerControl {
         if (mMainActivity.playPattern == mMainActivity.PLAY_IN_ORDER) {
 
             mMainActivity.musicId = (mMainActivity.musicId + 1) % mMainActivity.songNum;
-            mMainActivity.setMusicView(MainActivity.IsPlay.play);
+            musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
 
         }
         //随机播放
         else if (mMainActivity.playPattern == mMainActivity.PLAY_RANDOM) {
             mMainActivity.musicId = (mMainActivity.musicId+(int)(1+Math.random()*(20-1+1))) % mMainActivity.songNum ;
-            mMainActivity.setMusicView(MainActivity.IsPlay.play);
+            musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
         }
         //单曲循环
         else if(mMainActivity.playPattern == mMainActivity.PLAY_SINGLE){
-            mMainActivity.setMusicView(MainActivity.IsPlay.play);
+            musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
         }
     }
 

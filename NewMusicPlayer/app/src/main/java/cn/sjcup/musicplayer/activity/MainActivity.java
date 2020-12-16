@@ -27,6 +27,7 @@ import cn.sjcup.musicplayer.player.PlayerPresenter;
 import cn.sjcup.musicplayer.player.PlayerViewControl;
 import cn.sjcup.musicplayer.service.PlayerService;
 import cn.sjcup.musicplayer.servlet.RequestServlet;
+import cn.sjcup.musicplayer.util.MusicPlayUtil;
 
 public class MainActivity extends Activity {
 
@@ -47,9 +48,9 @@ public class MainActivity extends Activity {
     private Button mPlayNext;
     private Button mPlayMenu;
     private Button mQuit;
-    private TextView mMusicName;
-    private TextView mMusicArtist;
-    private SmartImageView mMusicPic;
+    public TextView mMusicName;
+    public TextView mMusicArtist;
+    public SmartImageView mMusicPic;
 
     public final int PLAY_IN_ORDER = 0;   //顺序播放
     public final int PLAY_RANDOM = 1;    //随机播放
@@ -63,7 +64,8 @@ public class MainActivity extends Activity {
     public static JSONArray sMusicList;
 
     //public PlayerViewControl mPlayerViewControl = ViewControl;
-    private PlayerControl mPlayerControl = new PlayerPresenter(this);
+    public PlayerControl mPlayerControl = new PlayerPresenter(this);
+    private MusicPlayUtil musicPlayUtil = MusicPlayUtil.getInstance();   //获取工具类实体类对象
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -81,6 +83,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        musicPlayUtil.setMainActivity(this);   //把本对象交给工具类
 
         initUserData();   //初始化用户信息
 
@@ -191,6 +195,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MusicListActivity.class);
+
                 startActivity(intent);
             }
         });
@@ -325,27 +330,7 @@ public class MainActivity extends Activity {
         play, notPlay
     }
 
-    //设置有关歌曲的界面
-    public void setMusicView(IsPlay playState){
-        try {
-            JSONObject musicInfo = (JSONObject) sMusicList.get(musicId);
-            String name = musicInfo.optString("name");
-            String author = musicInfo.optString("author");
-            String img = musicInfo.optString("img");
-            playAddress=musicInfo.optString("address");
-            mMusicPic.setImageUrl(IMG+img,R.mipmap.ic_launcher,R.mipmap.ic_launcher);
-            mMusicName.setText(name);
-            mMusicArtist.setText(author);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if(playState == IsPlay.play){
-            if ( mPlayerControl != null) {
-                mPlayerControl.stopPlay();
-            }
-            mPlayerControl.playOrPause(playState);
-        }
-    }
+
 
     //获取音乐列表
     private void getMusicListThread(){
@@ -374,7 +359,7 @@ public class MainActivity extends Activity {
                     songNum = sMusicList.length();
 
                     //根据用户数据和歌曲列表初始化有关歌曲的界面
-                    setMusicView(IsPlay.notPlay);
+                    musicPlayUtil.setMusicView(IsPlay.notPlay);
                 }
             }catch (Exception e) {
                 e.printStackTrace();
