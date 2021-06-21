@@ -21,21 +21,26 @@ import com.loopj.android.image.SmartImageView;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 import cn.sjcup.musicplayer.R;
 import cn.sjcup.musicplayer.player.PlayerControl;
 import cn.sjcup.musicplayer.player.PlayerPresenter;
 import cn.sjcup.musicplayer.player.PlayerViewControl;
 import cn.sjcup.musicplayer.service.PlayerService;
 import cn.sjcup.musicplayer.servlet.RequestServlet;
+import cn.sjcup.musicplayer.util.CommonVariable;
 import cn.sjcup.musicplayer.util.MusicPlayUtil;
 
 public class MainActivity extends Activity {
 
+    private static String Ip = CommonVariable.Ip;
     private String account;    //账户
     public int musicId;   //歌曲id
     public int playPattern;  //播放模式
     public String playAddress;  //音乐文件地址
-    public static final String IMG = "http://192.168.43.230:8080/musicplayer/image/";    //音乐图片的通用地址
+    public static final String IMG = Ip+"image/";    //音乐图片的通用地址
     private boolean isUserTouchProgressBar = false;   //判断手是否触摸进度条的状态
     private Intent musicIntent;
     private PlayerConnection mPlayerConnection;
@@ -94,6 +99,8 @@ public class MainActivity extends Activity {
 
         //initService();  //初始化服务
     }
+
+
 
     //初始化用户信息
     private void initUserData(){

@@ -14,8 +14,12 @@ import android.widget.Toast;
 
 import org.json.JSONObject;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 import cn.sjcup.musicplayer.R;
 import cn.sjcup.musicplayer.servlet.RequestServlet;
+import cn.sjcup.musicplayer.util.CommonVariable;
 
 //public class LoginActivity extends AppCompatActivity {
 public class LoginActivity extends Activity {
@@ -154,5 +158,20 @@ public class LoginActivity extends Activity {
         mPwd = this.findViewById(R.id.et_psw);
 
         mMainTitle.setText("登录");
+    }
+
+    static {
+        try {
+            InputStream in = LoginActivity.class.getClassLoader().getResourceAsStream("assets/Ip.properties");//读取配置文件返回数据流
+
+            System.out.println("********数据流");
+
+            Properties properties = new Properties();
+            properties.load(in);
+            CommonVariable.Ip = properties.getProperty("ip");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

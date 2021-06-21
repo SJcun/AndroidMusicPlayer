@@ -9,19 +9,25 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Properties;
+
+import cn.sjcup.musicplayer.util.CommonVariable;
 
 public class RequestServlet {
 
-    private static final String LOGIN_SERVLET = "http://192.168.43.230:8080/musicplayer/login";
-    private static final String REGISTER_SERVLET ="http://192.168.43.230:8080/musicplayer/SignUp";
-    private static final String CHANGEPWD_SERVLET ="http://192.168.43.230:8080/musicplayer/UpdatePwd";
-    private static final String SAVE_USER_INFO ="http://192.168.43.230:8080/musicplayer/SaveMusic";
-    private static final String GET_MUSIC_LIST = "http://192.168.43.230:8080/musicplayer/GetMusicList";
+    private  static String Ip = CommonVariable.Ip;
+    private static final String LOGIN_SERVLET = Ip+"login";
+    private static final String REGISTER_SERVLET =Ip+"SignUp";
+    private static final String CHANGEPWD_SERVLET =Ip+"UpdatePwd";
+    private static final String SAVE_USER_INFO =Ip+"SaveMusic";
+    private static final String GET_MUSIC_LIST = Ip+"GetMusicList";
     private static HttpURLConnection conn;
     private static JSONObject JSONobj;
 
     public static HttpURLConnection getConn(String path){
         try {
+            System.out.println(path);   //打印访问路径
+
             URL url = new URL(path);
             conn = (HttpURLConnection) url.openConnection();
             //设置请求方式

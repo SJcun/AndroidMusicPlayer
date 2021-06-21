@@ -7,13 +7,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import cn.sjcup.musicplayer.activity.MainActivity;
+import cn.sjcup.musicplayer.util.CommonVariable;
 import cn.sjcup.musicplayer.util.MusicPlayUtil;
 
 public class PlayerPresenter implements PlayerControl {
 
     private MediaPlayer mMediaPlayer = null;
 
-    private static final String ADDRESS = "http://192.168.43.230:8080/musicplayer/music/";
+    private static final String ADDRESS = CommonVariable.Ip+"music/";
     private PlayerViewControl mViewController = null;
     private MainActivity mMainActivity = null;
     private MusicPlayUtil musicPlayUtil = MusicPlayUtil.getInstance();   //获取工具类实体类对象
