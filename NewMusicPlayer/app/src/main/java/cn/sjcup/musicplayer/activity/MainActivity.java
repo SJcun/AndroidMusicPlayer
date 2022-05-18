@@ -31,14 +31,17 @@ import cn.sjcup.musicplayer.player.PlayerViewControl;
 import cn.sjcup.musicplayer.service.PlayerService;
 import cn.sjcup.musicplayer.servlet.RequestServlet;
 import cn.sjcup.musicplayer.util.CommonVariable;
+import cn.sjcup.musicplayer.util.JsonUtil;
 import cn.sjcup.musicplayer.util.MusicPlayUtil;
+import cn.sjcup.musicplayer.util.PlayPattern;
+import cn.sjcup.musicplayer.util.PlayState;
 
 public class MainActivity extends Activity {
 
-    private static String Ip = CommonVariable.Ip;
+    private static final String Ip = CommonVariable.getIp();
     private String account;    //账户
     public int musicId;   //歌曲id
-    public int playPattern;  //播放模式
+    public PlayPattern playPattern;  //播放模式
     public String playAddress;  //音乐文件地址
     public static final String IMG = Ip+"image/";    //音乐图片的通用地址
     private boolean isUserTouchProgressBar = false;   //判断手是否触摸进度条的状态
@@ -46,32 +49,30 @@ public class MainActivity extends Activity {
     private PlayerConnection mPlayerConnection;
     public int songNum = 0;  //歌曲总数
 
+    //以下是绑定界面使用
     private SeekBar mSeekBar;  //进度条
-    private Button mPlayOrPause;
-    private Button mPlayPattern;
-    private Button mPlayLast;
-    private Button mPlayNext;
-    private Button mPlayMenu;
-    private Button mQuit;
-    public TextView mMusicName;
-    public TextView mMusicArtist;
-    public SmartImageView mMusicPic;
+    private Button mPlayOrPause;  //播放按钮
+    private Button mPlayPattern;  //播放模式按钮
+    private Button mPlayLast;  //播放上一首按钮
+    private Button mPlayNext;  //播放下一首按钮
+    private Button mPlayMenu;  //打开音乐列表
+    private Button mQuit;   //退出按钮
+    public TextView mMusicName;  //显示歌曲名称
+    public TextView mMusicArtist;  //显示演唱者
+    public SmartImageView mMusicPic;  //显示歌曲图片
 
-    public final int PLAY_IN_ORDER = 0;   //顺序播放
-    public final int PLAY_RANDOM = 1;    //随机播放
-    public final int PLAY_SINGLE = 2;    //单曲循环
+    public static JSONArray sMusicList;  //存储歌曲信息
 
-    //播放状态
-    public final int PLAY_STATE_PLAY=1;   //在播
-    public final int PLAY_STATE_PAUSE=2;  //暂停
-    public final int PLAY_STATE_STOP=3;   //未播
 
-    public static JSONArray sMusicList;
-
-    //public PlayerViewControl mPlayerViewControl = ViewControl;
     public PlayerControl mPlayerControl = new PlayerPresenter(this);
     private MusicPlayUtil musicPlayUtil = MusicPlayUtil.getInstance();   //获取工具类实体类对象
 
+    /**
+     * 退回手机主界面的事件
+     * @param keyCode
+     * @param event
+     * @return
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -84,36 +85,45 @@ public class MainActivity extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
+    /**
+     * 界面建立默认执行的事件
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         musicPlayUtil.setMainActivity(this);   //把本对象交给工具类
-
         initUserData();   //初始化用户信息
-
         initView(); //初始化界面
-
         initEvent();   //初始化事件
-
-        //initService();  //初始化服务
     }
 
-
-
-    //初始化用户信息
+    /**
+     * 初始化用户信息（用户信息由登录界面传递过来，经登录界面验证通过的用户信息是正确的信息）
+     */
     private void initUserData(){
         Intent intent = getIntent();
 
         String userStr = intent.getStringExtra("result");
-        JSONObject userData = RequestServlet.getJSON(userStr);
+        JSONObject userData = JsonUtil.getInstance().getJSON(userStr);
         account = userData.optString("account");
         musicId = userData.optInt("music_id");
-        playPattern = userData.optInt("pattern");
+        int num = userData.optInt("pattern");
+
+        if(num==0){
+            playPattern = PlayPattern.PLAY_IN_ORDER;
+        }else if(num==1){
+            playPattern = PlayPattern.PLAY_RANDOM;
+        }else{
+            playPattern = PlayPattern.PLAY_SINGLE;
+        }
     }
 
-    //初始化服务
+    /**
+     * 初始化用户信息（已弃用）
+     */
     private void initService(){
         musicIntent = new Intent(this, PlayerService.class);
         startService(musicIntent);
@@ -121,6 +131,9 @@ public class MainActivity extends Activity {
         initBindService();   //绑定服务
     }
 
+    /**
+     * 绑定服务（已经弃用）
+     */
     private void initBindService() {
         //Log.d(Tag, "initBindService --> ");
         Intent intent=new Intent(this, PlayerService.class);
@@ -130,25 +143,23 @@ public class MainActivity extends Activity {
         bindService(intent, mPlayerConnection, BIND_AUTO_CREATE);
     }
 
+    /**
+     * 服务相关（已经弃用，代码无用）
+     */
     private class PlayerConnection implements ServiceConnection {
-
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            //Log.d(Tag, "onServiceConnected "+service);
-            //mplayerControl
             mPlayerControl = (PlayerPresenter) service;
-            //mplayerControl
-            //playerControl.registerViewController(playerViewControl);
         }
-
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            //Log.d(Tag, "onServiceDisconnected ");
             mPlayerControl=null;
         }
     }
 
-    //初始化事件
+    /**
+     * 初始化相关事件，为按钮设置监听
+     */
     private void initEvent(){
 
         //播放/暂停按钮
@@ -156,7 +167,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 if(mPlayerControl!=null){
-                    mPlayerControl.playOrPause(IsPlay.notPlay);
+                    mPlayerControl.playOrPause(PlayState.PLAY_STATE_STOP);
                 }
             }
         });
@@ -185,14 +196,16 @@ public class MainActivity extends Activity {
         mPlayPattern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playPattern = (playPattern+1)%3;
 
-                if (playPattern==0) {
+                if (playPattern==PlayPattern.PLAY_SINGLE) {
                     mPlayPattern.setBackgroundResource(R.drawable.xunhuanbofang);
-                }else if(playPattern==1){
+                    playPattern = PlayPattern.PLAY_IN_ORDER;
+                }else if(playPattern==PlayPattern.PLAY_IN_ORDER){
                     mPlayPattern.setBackgroundResource(R.drawable.suijibofang);
-                } else if (playPattern==2) {
+                    playPattern = PlayPattern.PLAY_RANDOM;
+                } else if (playPattern==PlayPattern.PLAY_RANDOM) {
                     mPlayPattern.setBackgroundResource(R.drawable.danquxunhuan);
+                    playPattern = PlayPattern.PLAY_SINGLE;
                 }
             }
         });
@@ -242,9 +255,12 @@ public class MainActivity extends Activity {
         });
     }
 
+    /**
+     * 界面刷新的实现类（内部类）
+     */
     public PlayerViewControl mPlayerViewControl = new PlayerViewControl() {
         @Override
-        public void onPlayerStateChange(int state) {
+        public void onPlayerStateChange(PlayState state) {
             //根据播放状态来修改UI
             switch (state) {
                 case PLAY_STATE_PLAY:
@@ -258,6 +274,10 @@ public class MainActivity extends Activity {
             }
         }
 
+        /**
+         * 刷新进度条
+         * @param seek  百分比的进度
+         */
         @Override
         public void onSeekChange(final int seek) {
             //改变播放进度，有一个条件：当用户的手触摸到进度条的时候，就不更新。
@@ -275,12 +295,14 @@ public class MainActivity extends Activity {
         }
     };
 
-    //保存数据到数据库里
+    /**
+     * 保存数据到数据库里（这里使用了一个匿名对象开启线程，不太好，后续改进）
+     */
     private void saveDataToDB(){
         new Thread() {
             public void run () {
                 try {
-                    JSONObject result = RequestServlet.savePlayerInformation(account, musicId, playPattern);
+                    JSONObject result = RequestServlet.getInstance().savePlayerInformation(account, musicId, playPattern);
                     Message msg = new Message();
                     msg.what = 1;
                     msg.obj = result;
@@ -292,6 +314,9 @@ public class MainActivity extends Activity {
         }.start();
     }
 
+    /**
+     * 保存完毕后控制app退出
+     */
     Handler handler1 = new Handler(){
         public void handleMessage(android.os.Message msg) {
             try {
@@ -307,7 +332,9 @@ public class MainActivity extends Activity {
         }
     };
 
-    //初始化界面
+    /**
+     * 初始化界面。绑定界面部件和获取歌曲信息
+     */
     private void initView(){
         mSeekBar = (SeekBar) this.findViewById(R.id.seek_bar);
         mPlayOrPause = (Button) this.findViewById(R.id.play_or_pause_btn);
@@ -321,11 +348,11 @@ public class MainActivity extends Activity {
         mMusicPic = (SmartImageView) this.findViewById(R.id.siv_icon);
 
         //模式转换
-        if (playPattern==PLAY_IN_ORDER) {
+        if (playPattern== PlayPattern.PLAY_IN_ORDER) {
             mPlayPattern.setBackgroundResource(R.drawable.xunhuanbofang);
-        }else if(playPattern==PLAY_RANDOM){
+        }else if(playPattern==PlayPattern.PLAY_RANDOM){
             mPlayPattern.setBackgroundResource(R.drawable.suijibofang);
-        } else if (playPattern==PLAY_SINGLE) {
+        } else if (playPattern==PlayPattern.PLAY_SINGLE) {
             mPlayPattern.setBackgroundResource(R.drawable.danquxunhuan);
         }
 
@@ -333,19 +360,15 @@ public class MainActivity extends Activity {
         getMusicListThread();
     }
 
-    public enum IsPlay{
-        play, notPlay
-    }
-
-
-
-    //获取音乐列表
+    /**
+     * 获取音乐列表
+     */
     private void getMusicListThread(){
         new Thread(){
             @Override
             public void run() {
                 try{
-                    JSONArray result = RequestServlet.getMusicList();
+                    JSONArray result = RequestServlet.getInstance().getMusicList();
                     Message msg = new Message();
                     msg.what = 2;
                     msg.obj = result;
@@ -358,6 +381,9 @@ public class MainActivity extends Activity {
         }.start();
     }
 
+    /**
+     * 获取到歌曲信息就要刷新播放主界面
+     */
     private Handler handler2 = new Handler(){
         public void handleMessage(android.os.Message msg) {
             try {
@@ -366,7 +392,7 @@ public class MainActivity extends Activity {
                     songNum = sMusicList.length();
 
                     //根据用户数据和歌曲列表初始化有关歌曲的界面
-                    musicPlayUtil.setMusicView(IsPlay.notPlay);
+                    musicPlayUtil.setMusicView(PlayState.PLAY_STATE_STOP);
                 }
             }catch (Exception e) {
                 e.printStackTrace();
@@ -375,6 +401,9 @@ public class MainActivity extends Activity {
     };
 
 
+    /**
+     * 停止播放事件
+     */
     private void stop() {
         mPlayerControl.stopPlay();
         //stopService(musicIntent);

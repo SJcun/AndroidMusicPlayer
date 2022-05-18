@@ -34,6 +34,10 @@ public class LoginActivity extends Activity {
     private EditText mPwd;   //输入密码
     private String userName, pwd;     //登录所需的账户和密码
 
+    /**
+     * 界面创建自动执行
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +48,9 @@ public class LoginActivity extends Activity {
         initEvent();  //初始化相关事件
     }
 
+    /**
+     * 为按钮点击事件创建监听
+     */
     private void initEvent(){
 
         //监听返回键的点击事件
@@ -96,12 +103,15 @@ public class LoginActivity extends Activity {
         });
     }
 
+    /**
+     * 登录线程（目前是匿名的，后续改进）
+     */
     private void loginThread(){
         //涉及到网络的请求都需要在子线程内完成
         new Thread(){
             public void run(){
                 try {
-                    JSONObject result = RequestServlet.login(userName, pwd);
+                    JSONObject result = RequestServlet.getInstance().login(userName, pwd);
 
                     //将数据传递到主线程
                     Message msg = new Message();
@@ -115,39 +125,36 @@ public class LoginActivity extends Activity {
         }.start();
     }
 
+    /**
+     * 服务端响应数据后，将信息提示给用户
+     */
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
             if (msg.what == 1) {
                 JSONObject result = (JSONObject) msg.obj;
-
-                if(result == null || !result.optString("account").equals(userName)){
-                    Toast.makeText(LoginActivity.this, "账户错误", Toast.LENGTH_SHORT).show();
+                String str = result.optString("result");
+                if(!str.equals("")){  //凡是返回  {'result':'xxx'} 都表示登录失败，需要为用户提示返回的信息
+                    Toast.makeText(LoginActivity.this, str, Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    String password = result.optString("password");
-                    if(pwd.equals(password)){
-                        //密码正确
-                        Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-
-                        //传递数据
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        intent.putExtra("result",result.toString());   //把用户信息传递到播放界面
-
-                        //销毁登录界面
-                        LoginActivity.this.finish();
-
-                        //跳转到主界面，登录成功的状态传递到 MainActivity 中
-                        startActivity(intent);
-                        return;
-                    }
-                    else{
-                        Toast.makeText(LoginActivity.this, "密码错误", Toast.LENGTH_SHORT).show();
-                    }
+                    //密码正确
+                    Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                    //传递数据
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("result",result.toString());   //把用户信息传递到播放界面
+                    //销毁登录界面
+                    LoginActivity.this.finish();
+                    //跳转到主界面，登录成功的状态传递到 MainActivity 中
+                    startActivity(intent);
+                    return;
                 }
             }
         }
     };
 
+    /**
+     * 初始化界面，绑定界面上的控件
+     */
     private void initView(){
         mMainTitle = this.findViewById(R.id.tv_main_title);
         mBack = this.findViewById(R.id.tv_back);
@@ -160,15 +167,15 @@ public class LoginActivity extends Activity {
         mMainTitle.setText("登录");
     }
 
+    /**
+     * 静态方法，当界面启动时，就去配置文件内读取配置信息
+     */
     static {
         try {
             InputStream in = LoginActivity.class.getClassLoader().getResourceAsStream("assets/Ip.properties");//读取配置文件返回数据流
-
-            System.out.println("********数据流");
-
             Properties properties = new Properties();
             properties.load(in);
-            CommonVariable.Ip = properties.getProperty("ip");
+            CommonVariable.setIp(properties.getProperty("ip"));
 
         } catch (Exception e) {
             e.printStackTrace();

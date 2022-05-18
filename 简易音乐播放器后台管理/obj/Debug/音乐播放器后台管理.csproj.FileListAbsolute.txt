@@ -1,0 +1,12 @@
+C:\Users\cun\source\repos\音乐播放器后台管理\bin\Debug\音乐播放器后台管理.exe.config
+C:\Users\cun\source\repos\音乐播放器后台管理\bin\Debug\音乐播放器后台管理.exe
+C:\Users\cun\source\repos\音乐播放器后台管理\bin\Debug\音乐播放器后台管理.pdb
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.csprojAssemblyReference.cache
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.MainForm.resources
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.MusicMangeForm.resources
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.PersonMangeForm.resources
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.Properties.Resources.resources
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.csproj.GenerateResource.cache
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.csproj.CoreCompileInputs.cache
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.exe
+C:\Users\cun\source\repos\音乐播放器后台管理\obj\Debug\音乐播放器后台管理.pdb

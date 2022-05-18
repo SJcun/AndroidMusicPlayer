@@ -94,7 +94,7 @@ public class RegisterActivity extends Activity {
         new Thread(){
             public void run(){
                 try {
-                    JSONObject result = RequestServlet.login(account, password);
+                    JSONObject result = RequestServlet.getInstance().login(account, password);
 
                     Message msg = new Message();
                     msg.what=2;
@@ -128,7 +128,7 @@ public class RegisterActivity extends Activity {
         new Thread(){
             public void run(){
                 try {
-                    JSONObject result = RequestServlet.Register(account, password);
+                    JSONObject result = RequestServlet.getInstance().Register(account, password);
                     Message msg = new Message();
                     msg.what=1;
                     msg.obj = result;
@@ -150,8 +150,8 @@ public class RegisterActivity extends Activity {
                 if(result.equals("注册成功！")){
                     Toast.makeText(RegisterActivity.this, "注册成功！", Toast.LENGTH_SHORT).show();
                     RegisterActivity.this.finish();
-                }else if(result.equals("注册失败！")){
-                    Toast.makeText(RegisterActivity.this, "注册失败，请重新注册", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(RegisterActivity.this, result, Toast.LENGTH_SHORT).show();
                 }
             }
         }

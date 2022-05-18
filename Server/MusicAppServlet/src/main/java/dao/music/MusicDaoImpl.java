@@ -10,7 +10,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 操作数据库上的歌曲信息
+ */
 public class MusicDaoImpl implements MusicDao {
+
+    /**
+     * 获取全部歌曲信息
+     * @param connection  数据库连接
+     * @return  歌曲信息
+     * @throws SQLException
+     */
     public List<Music> getMusicList(Connection connection) throws SQLException {
 
         ArrayList<Music> musicList = new ArrayList<Music>();

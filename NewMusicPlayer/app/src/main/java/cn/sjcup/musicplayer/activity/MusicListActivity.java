@@ -1,6 +1,5 @@
 package cn.sjcup.musicplayer.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,9 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,17 +20,21 @@ import org.json.JSONObject;
 
 import cn.sjcup.musicplayer.R;
 import cn.sjcup.musicplayer.util.MusicPlayUtil;
+import cn.sjcup.musicplayer.util.PlayState;
 
 import static cn.sjcup.musicplayer.activity.MainActivity.IMG;
 
+/**
+ * 歌曲列表
+ */
 public class MusicListActivity extends Activity {
 
-    private ImageButton mBack;
-    private ListView mMusicList;
-    private TextView mState;
+    private ImageButton mBack;  //返回按钮
+    private ListView mMusicList;  //展示歌曲信息
+    private TextView mState;  //状态控件
 
-    private JSONArray musicList;
-    private JSONObject musicInfo;
+    private JSONArray musicList;  //获取的歌曲列表信息
+    private JSONObject musicInfo;  //单条歌曲信息
 
     private MusicPlayUtil musicPlayUtil = MusicPlayUtil.getInstance();   //获取工具类实体类对象
 
@@ -48,7 +49,9 @@ public class MusicListActivity extends Activity {
         initEvent();
     }
 
-    //初始化事件
+    /**
+     * 初始化事件，为按钮设置监听事件
+     */
     private void initEvent() {
         mMusicList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -60,7 +63,7 @@ public class MusicListActivity extends Activity {
                     mState.setText("播放中");
                     mState.setTextColor(Color.RED);
                     musicPlayUtil.setMusicId(position);
-                    musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
+                    musicPlayUtil.setMusicView(PlayState.PLAY_STATE_PLAY);
                     finish();
                 } else {
                     mState.setText("");
@@ -69,7 +72,7 @@ public class MusicListActivity extends Activity {
                     mState.setText("播放中");
                     mState.setTextColor(Color.RED);
                     musicPlayUtil.setMusicId(position);
-                    musicPlayUtil.setMusicView(MainActivity.IsPlay.play);
+                    musicPlayUtil.setMusicView(PlayState.PLAY_STATE_PLAY);
                     finish();
                 }
 
@@ -84,7 +87,9 @@ public class MusicListActivity extends Activity {
         });
     }
 
-    //初始化界面
+    /**
+     * 初始化界面，绑定按钮，填充歌曲信息
+     */
     private void initView() {
         mBack = findViewById(R.id.ib_title_back);
         mMusicList = findViewById(R.id.lv_music);
@@ -93,13 +98,18 @@ public class MusicListActivity extends Activity {
         fillData();  //填充数据
     }
 
-    //填充数据
+    /**
+     * 填充数据
+     */
     private void fillData() {
 
         //mLoad.setVisibility(View.INVISIBLE);
         mMusicList.setAdapter(new MusicAdapter());
     }
 
+    /**
+     * listview适配器，方便填充。  这部分在博文上有详细讲解  https://blog.csdn.net/cun_king/article/details/111243881
+     */
     private class MusicAdapter extends BaseAdapter {
         @Override
         public int getCount() {

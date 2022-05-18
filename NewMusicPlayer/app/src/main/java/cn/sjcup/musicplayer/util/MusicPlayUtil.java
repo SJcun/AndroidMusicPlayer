@@ -9,10 +9,13 @@ import cn.sjcup.musicplayer.player.PlayerControl;
 
 import static cn.sjcup.musicplayer.activity.MainActivity.IMG;
 
+/**
+ * 播放歌曲工具类
+ */
 public class MusicPlayUtil {
 
-    private MainActivity mainActivity = null;
-    private PlayerControl mPlayerControl = null;
+    private MainActivity mainActivity = null;  //控制播放的实体类
+    private PlayerControl mPlayerControl = null;  //音乐播放控制器
 
     private  MusicPlayUtil(){
     }
@@ -23,34 +26,52 @@ public class MusicPlayUtil {
         return musicPlayUtil;
     }
 
-    //绑定MainActivity
+    /**
+     * 绑定主播放界面
+     * @param activity
+     */
     public void setMainActivity(MainActivity activity){
         this.mainActivity = activity;
         mPlayerControl = mainActivity.mPlayerControl;
     }
 
-    //获取歌曲列表
+    /**
+     * 获取歌曲列表
+     * @return
+     */
     public JSONArray getMusicList(){
         return mainActivity.sMusicList;
     }
 
-    //获取歌曲id
+    /**
+     * 获取歌曲id
+     * @return
+     */
     public int getMusicId(){
         return mainActivity.musicId;
     }
 
-    //获取歌曲总数
+    /**
+     * 获取歌曲总数
+     * @return
+     */
     public int getMusicNum(){
         return mainActivity.songNum;
     }
 
-    //设置歌曲id
+    /**
+     * 设置歌曲id
+     * @param id
+     */
     public void setMusicId(int id){
         mainActivity.musicId = id;
     }
 
-    //设置有关歌曲的界面
-    public void setMusicView(MainActivity.IsPlay playState){
+    /**
+     * 刷新有关歌曲的界面
+     * @param playState
+     */
+    public void setMusicView(PlayState playState){
         try {
             JSONObject musicInfo = (JSONObject) mainActivity.sMusicList.get(mainActivity.musicId);
             String name = musicInfo.optString("name");
@@ -63,7 +84,7 @@ public class MusicPlayUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if(playState == MainActivity.IsPlay.play){
+        if(playState == PlayState.PLAY_STATE_PLAY){
             if ( mPlayerControl != null) {
                 mPlayerControl.stopPlay();
             }

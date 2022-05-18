@@ -6,7 +6,56 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc946df9-67ce-4b32-ae42-61494fed4c49" name="Default Changelist" comment="" />
+    <list default="true" id="cc946df9-67ce-4b32-ae42-61494fed4c49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/Md5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/PlayPattern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/PlayState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/LogTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/ResponseMange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/Md5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/ChangePwdActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/ChangePwdActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/MusicListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/MusicListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/activity/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/player/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/player/PlayerControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/player/PlayerPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/player/PlayerPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/player/PlayerViewControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/player/PlayerViewControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/service/PlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/servlet/RequestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/servlet/RequestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/CommonVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/CommonVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/MusicPlayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewMusicPlayer/app/src/main/java/cn/sjcup/musicplayer/util/MusicPlayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/music/MusicDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/music/MusicDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/user/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/user/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/music/MusicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/music/MusicServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/user/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/music/GetMusicListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/music/GetMusicListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/user/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/user/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/user/SaveMusicServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/user/SaveMusicServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/user/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/user/SignUpServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/user/UpdatePwdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/user/UpdatePwdServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/WEB-INF/classes/META-INF/musicplayer.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicplayer/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicplayer/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/dao.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/daoxiang.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/guangnian.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/niyao.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/qing.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/xiaoban.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/xiazhui.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicplayer/music/zaijian.mp3" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,19 +138,41 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/music" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/musicplayer/WEB-INF" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\Git\Gitee\音乐播放器修改版\android-MusicPlayer\Server\MusicAppServlet\src\main\resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Git\Gitee\update\android-MusicPlayer\Server\MusicAppServlet\target\musicplayer\WEB-INF" />
       <recent name="D:\Code\Git\Gitee\android-MusicPlayer\Server\MusicAppServlet\src\main\webapp\music" />
       <recent name="D:\Code\Git\Gitee\android-MusicPlayer\Server\MusicAppServlet\src\main\webapp\image" />
       <recent name="E:\code\musicplayer\src\main\webapp\music" />
       <recent name="E:\code\musicplayer\src\main\webapp\image" />
-      <recent name="E:\code\musicplayer\src\main\java" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.46">
+    <configuration name="BaseDao.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MusicAppServlet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.BaseDao" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetMusicListServlet.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="musicplayer" />
       <extension name="coverage">
@@ -118,8 +189,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginServlet.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="musicplayer" />
+    <configuration name="LogTest.testLog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MusicAppServlet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.LogTest" />
+      <option name="METHOD_NAME" value="testLog" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginServlet.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MusicAppServlet" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="servlet.user.*" />
@@ -128,48 +215,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="servlet.user" />
       <option name="MAIN_CLASS_NAME" value="servlet.user.LoginServlet" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MusicServiceImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="musicplayer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.music.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service.music" />
-      <option name="MAIN_CLASS_NAME" value="service.music.MusicServiceImpl" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="musicplayer" />
+    <configuration name="Md5Util.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MusicAppServlet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.user.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dao.user" />
-      <option name="MAIN_CLASS_NAME" value="dao.user.UserDaoImpl" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test2.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="musicplayer" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test2" />
+      <option name="PACKAGE_NAME" value="util" />
+      <option name="MAIN_CLASS_NAME" value="util.Md5Util" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -250,20 +311,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LoginServlet.Test" />
-      <item itemvalue="JUnit.UserDaoImpl.test" />
-      <item itemvalue="JUnit.test2.test" />
-      <item itemvalue="JUnit.MusicServiceImpl.test" />
       <item itemvalue="JUnit.GetMusicListServlet.test" />
+      <item itemvalue="JUnit.BaseDao.test2" />
+      <item itemvalue="JUnit.Md5Util.test" />
+      <item itemvalue="JUnit.LogTest.testLog" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.46" />
+      <item itemvalue="JUnit.LoginServlet.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginServlet.test" />
+        <item itemvalue="JUnit.LogTest.testLog" />
+        <item itemvalue="JUnit.Md5Util.test" />
+        <item itemvalue="JUnit.BaseDao.test2" />
         <item itemvalue="JUnit.GetMusicListServlet.test" />
-        <item itemvalue="JUnit.MusicServiceImpl.test" />
-        <item itemvalue="JUnit.test2.test" />
-        <item itemvalue="JUnit.UserDaoImpl.test" />
-        <item itemvalue="JUnit.LoginServlet.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +332,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.114443086" />
           <treeState>
             <expand>
               <path>
@@ -279,17 +341,17 @@
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6e1d0e2" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@39fcb764" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@7dd789d3" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -329,6 +391,12 @@
       <workItem from="1621515730352" duration="3141000" />
       <workItem from="1621603794820" duration="3711000" />
       <workItem from="1623468354163" duration="4939000" />
+      <workItem from="1625489499147" duration="18000" />
+      <workItem from="1625489586112" duration="470000" />
+      <workItem from="1640958234421" duration="7694000" />
+      <workItem from="1640996785048" duration="2868000" />
+      <workItem from="1640999683919" duration="14898000" />
+      <workItem from="1641022711598" duration="6993000" />
     </task>
     <servers />
   </component>
@@ -336,73 +404,69 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="178" key="#Tomcat_Server" timestamp="1621605306590">
+    <state x="446" y="172" key="#Project_Structure" timestamp="1641049869922">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="583" y="178" key="#Tomcat_Server/0.0.1707.1027@0.0.1707.1027" timestamp="1621605306590" />
-    <state x="446" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623475815449">
+    <state x="446" y="172" key="#Project_Structure/0.0.1707.1027@0.0.1707.1027" timestamp="1641049869922" />
+    <state x="446" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1641048041586">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="446" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1623475815449" />
-    <state x="634" y="272" key="FileChooserDialogImpl" timestamp="1621605301361">
+    <state x="446" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1641048041586" />
+    <state x="583" y="175" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1641048040229">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="634" y="272" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1621605301361" />
-    <state width="1143" height="277" key="GridCell.Tab.0.bottom" timestamp="1623482233339">
+    <state x="583" y="175" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1707.1027@0.0.1707.1027" timestamp="1641048040229" />
+    <state width="1663" height="409" key="GridCell.Tab.0.bottom" timestamp="1641052771242">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.0.center" timestamp="1623482233338">
+    <state width="1663" height="409" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771242" />
+    <state width="1663" height="409" key="GridCell.Tab.0.center" timestamp="1641052771242">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233338" />
-    <state width="1143" height="277" key="GridCell.Tab.0.left" timestamp="1623482233338">
+    <state width="1663" height="409" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771242" />
+    <state width="1663" height="409" key="GridCell.Tab.0.left" timestamp="1641052771242">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233338" />
-    <state width="1143" height="277" key="GridCell.Tab.0.right" timestamp="1623482233339">
+    <state width="1663" height="409" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771242" />
+    <state width="1663" height="409" key="GridCell.Tab.0.right" timestamp="1641052771242">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.1.bottom" timestamp="1623482233339">
+    <state width="1663" height="409" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771242" />
+    <state width="1446" height="551" key="GridCell.Tab.1.bottom" timestamp="1641052771241">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.1.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.1.center" timestamp="1623482233339">
+    <state width="1446" height="551" key="GridCell.Tab.1.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771241" />
+    <state width="1446" height="551" key="GridCell.Tab.1.center" timestamp="1641052771240">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.1.center/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.1.left" timestamp="1623482233339">
+    <state width="1446" height="551" key="GridCell.Tab.1.center/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771240" />
+    <state width="1446" height="551" key="GridCell.Tab.1.left" timestamp="1641052771240">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.1.left/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.1.right" timestamp="1623482233339">
+    <state width="1446" height="551" key="GridCell.Tab.1.left/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771240" />
+    <state width="1446" height="551" key="GridCell.Tab.1.right" timestamp="1641052771240">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.1.right/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.2.bottom" timestamp="1623482233339">
+    <state width="1446" height="551" key="GridCell.Tab.1.right/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771240" />
+    <state width="1446" height="551" key="GridCell.Tab.2.bottom" timestamp="1641052771241">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.2.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.2.center" timestamp="1623482233339">
+    <state width="1446" height="551" key="GridCell.Tab.2.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771241" />
+    <state width="1446" height="551" key="GridCell.Tab.2.center" timestamp="1641052771241">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.2.center/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.2.left" timestamp="1623482233339">
+    <state width="1446" height="551" key="GridCell.Tab.2.center/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771241" />
+    <state width="1446" height="551" key="GridCell.Tab.2.left" timestamp="1641052771241">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.2.left/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state width="1143" height="277" key="GridCell.Tab.2.right" timestamp="1623482233339">
+    <state width="1446" height="551" key="GridCell.Tab.2.left/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771241" />
+    <state width="1446" height="551" key="GridCell.Tab.2.right" timestamp="1641052771241">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1143" height="277" key="GridCell.Tab.2.right/0.0.1707.1027@0.0.1707.1027" timestamp="1623482233339" />
-    <state x="357" y="159" key="SettingsEditor" timestamp="1621518127249">
+    <state width="1446" height="551" key="GridCell.Tab.2.right/0.0.1707.1027@0.0.1707.1027" timestamp="1641052771241" />
+    <state x="584" y="319" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1641050256432">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="357" y="159" key="SettingsEditor/0.0.1707.1027@0.0.1707.1027" timestamp="1621518127249" />
-    <state x="550" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1623468356097">
-      <screen x="0" y="0" width="1707" height="1027" />
-    </state>
-    <state x="550" y="342" key="com.intellij.ide.util.TipDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1623468356097" />
+    <state x="584" y="319" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1641050256432" />
   </component>
 </project>

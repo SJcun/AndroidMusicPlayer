@@ -15,6 +15,12 @@ public class User {
     public User(){
 
     }
+
+    public User(String acc, String pwd){
+        this.account = acc;
+        this.password = pwd;
+    }
+
     @Override
     public String toString() {
         return "user{" +

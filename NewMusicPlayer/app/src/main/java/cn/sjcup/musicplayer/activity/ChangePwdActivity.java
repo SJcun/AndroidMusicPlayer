@@ -16,18 +16,25 @@ import org.json.JSONObject;
 import cn.sjcup.musicplayer.R;
 import cn.sjcup.musicplayer.servlet.RequestServlet;
 
+/**
+ * 控制密码修改
+ */
 public class ChangePwdActivity extends Activity {
 
-    private EditText mUserName;
-    private EditText mPassword;
-    private EditText mNewPwd;
-    private EditText mNewPwdAgain;
-    private TextView mTitle;
-    private Button mChangePwd;
-    private TextView mBack;
+    private EditText mUserName;  //账户
+    private EditText mPassword;  //密码
+    private EditText mNewPwd;  //新密码
+    private EditText mNewPwdAgain;  //重新输入的新密码
+    private TextView mTitle;  //标头
+    private Button mChangePwd;  //确认修改按钮
+    private TextView mBack;  //返回按钮
 
     private String userName, password, newPwd, newPwdAgain;
 
+    /**
+     * 界面创建默认执行的事件
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +45,9 @@ public class ChangePwdActivity extends Activity {
         initEvent();  //初始化事件
     }
 
+    /**
+     * 初始化界面，绑定界面控件
+     */
     private void initView(){
         mUserName = this.findViewById(R.id.et_user_name);
         mPassword = this.findViewById(R.id.et_psw);
@@ -50,6 +60,9 @@ public class ChangePwdActivity extends Activity {
         mTitle.setText("修改密码");
     }
 
+    /**
+     * 初始化事件，为按钮设置监听
+     */
     private void initEvent(){
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,46 +102,18 @@ public class ChangePwdActivity extends Activity {
                     Toast.makeText(ChangePwdActivity.this, "新密码与原密码相同", Toast.LENGTH_SHORT).show();
                 }
 
-                isTrueThread();  //判断用户信息是否正确
+                changePwdThread(); //修改密码线程;
             }
         });
     }
 
-    private void isTrueThread(){
-        new Thread(){
-            public void run(){
-                JSONObject result = RequestServlet.login(userName, password);
-
-                Message msg = new Message();
-                msg.what = 1;
-                msg.obj = result;
-                handler.sendMessage(msg);
-            }
-        }.start();
-    }
-
-    private Handler handler = new Handler(){
-        public void handleMessage(Message msg){
-            if(msg.what==1){
-                JSONObject userInformation = (JSONObject) msg.obj;
-
-                if(userInformation == null || !userInformation.optString("account").equals(userName)){
-                    Toast.makeText(ChangePwdActivity.this, "该账户不存在", Toast.LENGTH_SHORT).show();
-                    return;
-                }else if(!userInformation.optString("password").equals(password)){
-                    Toast.makeText(ChangePwdActivity.this, "原密码错误", Toast.LENGTH_SHORT).show();
-                    return;
-                }else{
-                    changePwdThread(); //修改密码线程
-                }
-            }
-        }
-    };
-
+    /**
+     * 修改密码的线程（目前线程都是使用匿名创建的，后续改进）
+     */
     private void changePwdThread(){
         new Thread(){
             public void run(){
-                JSONObject result = RequestServlet.changePwd(userName, newPwd);
+                JSONObject result = RequestServlet.getInstance().changePwd(userName, newPwd, password);
 
                 Message msg = new Message();
                 msg.what = 2;
@@ -138,6 +123,9 @@ public class ChangePwdActivity extends Activity {
         }.start();
     }
 
+    /**
+     * 刷新界面信息
+     */
     private Handler handler2 = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -148,8 +136,8 @@ public class ChangePwdActivity extends Activity {
                 if(str.equals("修改成功！")){
                     Toast.makeText(ChangePwdActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
                     ChangePwdActivity.this.finish();
-                }else if(str.equals("修改失败！")){
-                    Toast.makeText(ChangePwdActivity.this, "修改失败", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(ChangePwdActivity.this, str, Toast.LENGTH_SHORT).show();
                 }
             }
         }

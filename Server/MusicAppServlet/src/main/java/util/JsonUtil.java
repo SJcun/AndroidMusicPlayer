@@ -7,9 +7,38 @@ import pojo.User;
 
 import java.util.List;
 
+/**
+ * json工具类
+ */
 public class JsonUtil {
 
-    //user转json
+    /**
+     * 私有化构造器
+     */
+    private JsonUtil(){}
+
+    private static JsonUtil jsonUtilInstance = null;  //json工具类实体
+
+    /**
+     * 单例模式，获取实体类（线程安全）
+     * @return
+     */
+    public static JsonUtil getInstance(){
+        if(jsonUtilInstance==null){
+            synchronized(JsonUtil.class){
+                if(jsonUtilInstance==null){
+                    jsonUtilInstance = new JsonUtil();
+                }
+            }
+        }
+        return jsonUtilInstance;
+    }
+
+    /**
+     * 用户信息打包为json数据
+     * @param user  用户信息
+     * @return  json字符串
+     */
     public String getUserJson(User user){
         JSONObject userJson = new JSONObject();
 
@@ -27,7 +56,11 @@ public class JsonUtil {
         return userJson.toString();
     }
 
-    //music转json
+    /**
+     * 歌曲信息打包为json数据
+     * @param music  歌曲信息
+     * @return  json字符串
+     */
     public String getMusicJson(Music music){
         JSONObject musicJson = new JSONObject();
 
@@ -45,7 +78,11 @@ public class JsonUtil {
         return musicJson.toString();
     }
 
-    //List<Music>转JsonArray
+    /**
+     * 歌曲list打包为Json串
+     * @param musicList  歌曲信息
+     * @return  json字符串
+     */
     public String getJsonArray(List<Music> musicList){
 
         JSONObject musicJson = new JSONObject();

@@ -1,12 +1,12 @@
 package cn.sjcup.musicplayer.player;
 
-import cn.sjcup.musicplayer.activity.MainActivity;
+import cn.sjcup.musicplayer.util.PlayState;
 
 public interface PlayerControl {
     /*
      *播放
      */
-    void playOrPause(MainActivity.IsPlay playState);
+    void playOrPause(PlayState playState);
 
     /*
     播放上一首

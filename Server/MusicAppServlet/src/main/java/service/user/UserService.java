@@ -5,10 +5,10 @@ import pojo.User;
 public interface UserService {
 
     //用户登录
-    public User login(String account);
+    public User getUser(String account, String pwd);
 
     //根据用户账户修改密码
-    public boolean updatePwd(String account, String password);
+    public boolean updatePwd(String account, String oldPwd, String newPwd);
 
     //注册新用户
     public boolean insertUser(String account, String password);
